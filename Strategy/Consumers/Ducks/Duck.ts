@@ -1,4 +1,4 @@
-import { FlyBehavior, QuackBehavior } from './Interfaces';
+import { FlyBehavior, QuackBehavior } from '../../Behaviors/Interfaces';
 
 export abstract class Duck {
     flyBehavior: FlyBehavior;
@@ -10,6 +10,14 @@ export abstract class Duck {
     }
 
     abstract display(): void;
+
+    setFlyBehavior(flyBehavior: FlyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    setQuackBehavior(quackBehavior: QuackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
 
     performFly() {
         this.flyBehavior.fly();
