@@ -1,9 +1,9 @@
-import { CallBehavior } from "../../Interfaces";
+import { CallBehavior } from '../../Interfaces';
 
 class LoudShortSound implements CallBehavior {
-    call() {
-        console.log('LoudShortCall');
-    }
+  call() {
+    console.log('LoudShortCall');
+  }
 }
 
 export default LoudShortSound;
