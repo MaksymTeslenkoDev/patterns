@@ -6,6 +6,7 @@ This repository is dedicated to demonstrating various Object-Oriented Programmin
 ## Table of Contents
 
 1. [Strategy Pattern](#strategy-pattern)
+2. [Observer Pattern](#observer-pattern)
 
 ## Strategy Pattern
 
@@ -37,5 +38,36 @@ The Strategy Pattern is used when:
 ### Conclusion
 
 Remember, the Strategy pattern is useful when you have several related classes that only differ in their behavior. Strategies provide a way to configure a class with one of many behaviors.
+
+## Observer Pattern
+
+The Observer Pattern is a behavioral design pattern that allows objects to notify other objects about changes in their state. The Observer Pattern is widely used when a change to one object requires changing others, and you don't know how many objects need to be changed.
+
+### Structure
+
+The Observer Pattern involves two main components:
+
+1. **Subject**: Maintains a list of observers, facilitates adding or removing observers
+2. **Observer**: Provides an update interface for objects that need to be notified of a Subject's changes of state
+
+### Usage
+
+The Observer Pattern is used when:
+
+- An abstraction has two aspects, one dependent on the other. Encapsulating these aspects in separate objects lets you vary and reuse them independently.
+- A change to one object requires changing others, and you don't know how many objects need to be changed.
+- An object should be able to notify other objects without making assumptions about who these objects are. In other words, you don't want these objects tightly coupled.
+
+### Common Cases
+
+1. **Event Handling**: In event-driven programming, the Observer pattern is often used to notify interested objects when a particular event occurs.
+2. **Model-View-Controller (MVC)**: The Observer pattern is used in the model-view-controller (MVC) architectural pattern. In MVC, the this pattern is used to decouple the model from the view.
+3. **Progress Reporting**: If you have a long-running task (like a file upload), you can use the Observer pattern to notify interested parts of your application about the progress.
+4. **Newsletter Subscriptions**: When a new article or post is published, all subscribers (observers) can be notified.
+5. **State Management Libraries**: Libraries like Redux (used in React) or Vuex (used in Vue.js) use the Observer pattern to notify components when the application state changes, so they can update their views accordingly.
+
+### Conclusion
+
+The Observer pattern provides a simple way of communicating between components in a loosely coupled manner. It's a key part in many reactive systems and data-driven applications.
 
 Stay tuned for more patterns!
