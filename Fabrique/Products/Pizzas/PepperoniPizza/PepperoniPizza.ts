@@ -1,6 +1,6 @@
 import { Pizza } from '../../Interfaces';
 
-class PapperoniPizza implements Pizza {
+class PepperoniPizza implements Pizza {
   name: string;
   price: number;
   constructor() {
@@ -21,4 +21,4 @@ class PapperoniPizza implements Pizza {
   }
 }
 
-export default PapperoniPizza;
+export default PepperoniPizza;
