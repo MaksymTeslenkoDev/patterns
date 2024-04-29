@@ -1,4 +1,4 @@
-import { Pizza } from '../Products/Interfaces';
+import { Pizza } from '../Products/Abstracts';
 
 export abstract class PizzaStore {
   public orderPizza(type: string): Pizza | null {

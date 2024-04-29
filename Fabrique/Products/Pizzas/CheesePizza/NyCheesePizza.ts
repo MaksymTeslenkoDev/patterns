@@ -1,10 +1,11 @@
-import CheesePizza from './CheesePizza';
-
-class NyCheesePizza extends CheesePizza {
+import { Pizza } from '../../Abstracts';
+class NyCheesePizza extends Pizza {
   constructor() {
     super();
-    this.name = 'Ny';
-    this.price = 14;
+    this.name = 'NY Style Sauce and Cheese Pizza';
+    this.dough = 'Thin Crust Dough';
+    this.sauce = 'Marinara Sauce';
+    this.toppings.push('Grated Reggiano Cheese');
   }
 }
 

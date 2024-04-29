@@ -1,10 +1,12 @@
-import PepperoniPizza from './PepperoniPizza';
+import { Pizza } from '../../Abstracts';
 
-class CaliforniaPepperoniPizza extends PepperoniPizza {
+class CaliforniaPepperoniPizza extends Pizza {
   constructor() {
     super();
-    this.name = 'California';
-    this.price = 12;
+    this.name = 'California Style Pepperoni Pizza';
+    this.dough = 'Thin Crust Dough';
+    this.sauce = 'California Sauce';
+    this.toppings.push('Grated California Cheese');
   }
 }
 

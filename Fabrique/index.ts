@@ -7,11 +7,8 @@ import {
 (() => {
   console.log('Fabrique');
   const nyPizzaStore = new NyPizzaStore();
-  nyPizzaStore.orderPizza('cheese');
-
-  const californiaPizzaStore = new CaliforniaPizzaStore();
-  californiaPizzaStore.orderPizza('pepperoni');
-
-  const chicagoPizzaStore = new ChicagoPizzaStore();
-  chicagoPizzaStore.orderPizza('cheese');
+  const nyPizza = nyPizzaStore.orderPizza('cheese');
+  if(nyPizza){
+    console.log(`Ethan ordered a ${nyPizza.getName()}`);
+  }
 })();

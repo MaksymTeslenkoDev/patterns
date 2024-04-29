@@ -1,5 +1,5 @@
 import { PizzaStore } from './PizzaStore';
-import { Pizza } from '../Products/Interfaces';
+import { Pizza } from '../Products/Abstracts';
 import {
   CaliforniaCheesePizza,
   CaliforniaPepperoniPizza,

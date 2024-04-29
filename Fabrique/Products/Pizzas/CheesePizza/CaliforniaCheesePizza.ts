@@ -1,10 +1,12 @@
-import CheesePizza from './CheesePizza';
+import { Pizza } from '../../Abstracts';
 
-class CaliforniaCheesePizza extends CheesePizza {
+class CaliforniaCheesePizza extends Pizza {
   constructor() {
     super();
-    this.name = 'California';
-    this.price = 12;
+    this.name = 'California Style Cheese Pizza';
+    this.dough = 'Thin Crust Dough';
+    this.sauce = 'California Sauce';
+    this.toppings.push('Grated California Cheese');
   }
 }
 
