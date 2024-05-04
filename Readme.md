@@ -7,6 +7,8 @@ This repository is dedicated to demonstrating various Object-Oriented Programmin
 
 1. [Strategy Pattern](#strategy-pattern)
 2. [Observer Pattern](#observer-pattern)
+3. [Factory Method Pattern](#factory-method-pattern)
+4. [Abstract Factory Pattern](#abstract-factory-pattern)
 
 ## Strategy Pattern
 
@@ -69,5 +71,60 @@ The Observer Pattern is used when:
 ### Conclusion
 
 The Observer pattern provides a simple way of communicating between components in a loosely coupled manner. It's a key part in many reactive systems and data-driven applications.
+
+## Factory Method Pattern
+
+The Factory Method Pattern is a creational design pattern that provides an interface for creating objects, but allows subclasses to alter the type of objects that will be created.
+
+### Structure
+
+The Factory Method Pattern involves two main components:
+
+1. **Creator**: Declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the factory method.
+2. **ConcreteCreator**: Overrides the factory method to return an instance of a ConcreteProduct.
+
+### Usage
+
+The Factory Method Pattern is used when:
+
+- A class can't anticipate the class of objects it must create.
+- A class wants its subclasses to specify the objects it creates.
+- Classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate.
+
+### Common Cases
+
+1. **UI Libraries**: A library that's used for building UI components might use the Factory Method pattern to create buttons, panels, dialogs, etc.
+2. **Database Connectors**: Depending on the type of database (MySQL, PostgreSQL, MongoDB, etc.), a different type of connector might be created.
+
+## Abstract Factory Pattern
+
+The Abstract Factory Pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+### Structure
+
+The Abstract Factory Pattern involves several components:
+
+1. **AbstractFactory**: Declares an interface for operations that create abstract products.
+2. **ConcreteFactory**: Implements the operations to create concrete product objects.
+3. **AbstractProduct**: Declares an interface for a type of product object.
+4. **ConcreteProduct**: Defines a product object to be created by the corresponding concrete factory, and implements the AbstractProduct interface.
+
+### Usage
+
+The Abstract Factory Pattern is used when:
+
+- A system should be independent of how its products are created, composed, and represented.
+- A system should be configured with one of multiple families of products.
+- Products from a family are designed to work together, and you need to enforce this constraint.
+- You want to provide a class library of products, and you want to reveal just their interfaces, not their implementations.
+
+### Common Cases
+
+1. **GUI Toolkits**: Different operating systems have different look and feel for their GUI controls. An application can use an Abstract Factory to create controls that look native to the OS it's running on.
+2. **Database Migration Tools**: These tools can use Abstract Factory to create different types of database commands, which makes it easy to switch between different databases.
+
+### Conclusion
+
+The Factory Method and Abstract Factory patterns encapsulate the complexities of creating objects. The Factory Method pattern uses inheritance and relies on a subclass to handle the desired object instantiation. On the other hand, the Abstract Factory pattern uses object composition. Object creation is implemented in methods exposed in the factory interface.
 
 Stay tuned for more patterns!
